@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo/sweettime-vit-loggo.png"
+              src="/images/sweettime-vit-loggo.png"
               alt="Sweet Time UF Logo"
               width={48}
               height={48}

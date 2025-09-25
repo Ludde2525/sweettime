@@ -51,103 +51,131 @@ export default function ProductCard({ product }: { product: Product }) {
   }, [open, handleClose]);
 
   // Modal element (portal content) kept separate for clarity
-  const modalContent = open && modalRootRef.current
-    ? createPortal(
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center px-4 py-6"
-          aria-modal="true"
-          role="dialog"
-          onClick={handleClose}
-        >
-          {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
-          {/* Modal shell */}
+  const modalContent =
+    open && modalRootRef.current
+      ? createPortal(
           <div
-            className="relative w-[92vw] max-w-[1400px] max-h-[90vh] flex flex-col bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
+            className="fixed inset-0 z-[100] flex items-center justify-center px-4 py-6"
+            aria-modal="true"
+            role="dialog"
+            onClick={handleClose}
           >
-            {/* Header */}
-            <div className="flex items-start justify-between gap-4 px-8 pt-6 pb-4 border-b border-gray-700">
-              <h2 className="font-display text-2xl md:text-3xl text-white leading-snug">
-                {product.title} — {product.sku}
-              </h2>
-              <button
-                onClick={handleClose}
-                aria-label="Stäng"
-                className="text-gray-400 hover:text-white text-3xl leading-none px-2"
-              >
-                ×
-              </button>
-            </div>
-            {/* Body (scrollable only inside) */}
-            <div className="flex-1 overflow-y-auto px-8 pb-8 pt-4">
-              <div className="grid gap-10 xl:gap-12 md:grid-cols-2">
-                <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-gray-700">
-                  <Image
-                    src={img}
-                    alt={product.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="space-y-6 text-base text-gray-300 leading-relaxed">
-                  <p className="whitespace-pre-line">{product.longDescription}</p>
-                  {product.priceTiers?.length ? (
-                    <div>
-                      <h3 className="font-semibold text-white text-lg mb-3">Pris</h3>
-                      <ul className="list-disc pl-6 space-y-1.5">
-                        {product.priceTiers.map((p, i) => (
-                          <li key={i}>
-                            {p.qtyLabel}: {p.price} {p.unit ?? "kr"}
-                            {p.note ? ` — ${p.note}` : ""}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
-                  <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
-                    {product.weight && (
-                      <div><span className="text-gray-400">Vikt:</span> {product.weight}</div>
-                    )}
-                    {product.minOrder && (
-                      <div><span className="text-gray-400">Minsta order:</span> {product.minOrder}</div>
-                    )}
-                    {product.shelfLife && (
-                      <div><span className="text-gray-400">Hållbarhet:</span> {product.shelfLife}</div>
-                    )}
-                    {product.packaging && (
-                      <div className="sm:col-span-2"><span className="text-gray-400">Förpackning:</span> {product.packaging}</div>
-                    )}
-                    {product.leadTime && (
-                      <div className="sm:col-span-2"><span className="text-gray-400">Leveranstid:</span> {product.leadTime}</div>
-                    )}
-                    {product.express && (
-                      <div className="sm:col-span-2"><span className="text-gray-400">Expressorder:</span> {product.express}</div>
-                    )}
-                    {(product.setupCost || product.repeatCost) && (
-                      <div className="sm:col-span-2">
-                        <span className="text-gray-400">Klichékostnad:</span> {product.setupCost}
-                        {product.repeatCost ? ` • Repetitionsorder: ${product.repeatCost}` : ""}
-                      </div>
-                    )}
+            {/* Backdrop */}
+            <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+            {/* Modal shell */}
+            <div
+              className="relative w-[92vw] max-w-[1400px] max-h-[90vh] flex flex-col bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header */}
+              <div className="flex items-start justify-between gap-4 px-8 pt-6 pb-4 border-b border-gray-700">
+                <h2 className="font-display text-2xl md:text-3xl text-white leading-snug">
+                  {product.title} — {product.sku}
+                </h2>
+                <button
+                  onClick={handleClose}
+                  aria-label="Stäng"
+                  className="text-gray-400 hover:text-white text-3xl leading-none px-2"
+                >
+                  ×
+                </button>
+              </div>
+              {/* Body (scrollable only inside) */}
+              <div className="flex-1 overflow-y-auto px-8 pb-8 pt-4">
+                <div className="grid gap-10 xl:gap-12 md:grid-cols-2">
+                  <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-gray-700">
+                    <Image
+                      src={img}
+                      alt={product.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
                   </div>
-                  <div>
-                    <a
-                      href={`mailto:lg.sweets10@gmail.com?subject=Offertförfrågan: ${encodeURIComponent(product.title)} (${product.sku})`}
-                      className="inline-block bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors text-lg"
-                    >
-                      Maila offertförfrågan
-                    </a>
+                  <div className="space-y-6 text-base text-gray-300 leading-relaxed">
+                    <p className="whitespace-pre-line">
+                      {product.longDescription}
+                    </p>
+                    {product.priceTiers?.length ? (
+                      <div>
+                        <h3 className="font-semibold text-white text-lg mb-3">
+                          Pris
+                        </h3>
+                        <ul className="list-disc pl-6 space-y-1.5">
+                          {product.priceTiers.map((p, i) => (
+                            <li key={i}>
+                              {p.qtyLabel}: {p.price} {p.unit ?? "kr"}
+                              {p.note ? ` — ${p.note}` : ""}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
+                    <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
+                      {product.weight && (
+                        <div>
+                          <span className="text-gray-400">Vikt:</span>{" "}
+                          {product.weight}
+                        </div>
+                      )}
+                      {product.minOrder && (
+                        <div>
+                          <span className="text-gray-400">Minsta order:</span>{" "}
+                          {product.minOrder}
+                        </div>
+                      )}
+                      {product.shelfLife && (
+                        <div>
+                          <span className="text-gray-400">Hållbarhet:</span>{" "}
+                          {product.shelfLife}
+                        </div>
+                      )}
+                      {product.packaging && (
+                        <div className="sm:col-span-2">
+                          <span className="text-gray-400">Förpackning:</span>{" "}
+                          {product.packaging}
+                        </div>
+                      )}
+                      {product.leadTime && (
+                        <div className="sm:col-span-2">
+                          <span className="text-gray-400">Leveranstid:</span>{" "}
+                          {product.leadTime}
+                        </div>
+                      )}
+                      {product.express && (
+                        <div className="sm:col-span-2">
+                          <span className="text-gray-400">Expressorder:</span>{" "}
+                          {product.express}
+                        </div>
+                      )}
+                      {(product.setupCost || product.repeatCost) && (
+                        <div className="sm:col-span-2">
+                          <span className="text-gray-400">Klichékostnad:</span>{" "}
+                          {product.setupCost}
+                          {product.repeatCost
+                            ? ` • Repetitionsorder: ${product.repeatCost}`
+                            : ""}
+                        </div>
+                      )}
+                    </div>
+                    <div>
+                      <a
+                        href={`mailto:lg.sweets10@gmail.com?subject=Offertförfrågan: ${encodeURIComponent(
+                          product.title
+                        )} (${product.sku})`}
+                        className="inline-block bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors text-lg"
+                      >
+                        Maila offertförfrågan
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>,
-        modalRootRef.current
-      )
-    : null;
+          </div>,
+          modalRootRef.current
+        )
+      : null;
 
   return (
     <>
