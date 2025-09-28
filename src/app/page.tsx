@@ -22,8 +22,7 @@ export default function HomePage() {
 
           <div className="bg-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl text-center">
             <p className="text-gray-300 mb-6 text-lg">
-              Vi behöver inget kontaktformulär – skicka din offertförfrågan via
-              e-post så återkommer vi!
+              Skicka din offertförfrågan via e-post så återkommer vi!
             </p>
             <a
               href="mailto:lg.sweets10@gmail.com"

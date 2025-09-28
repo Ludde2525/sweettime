@@ -151,7 +151,7 @@ export const products: Product[] = [
       "En frisk och stark ingefärsshot. Etiketten runt flaskan trycks med din design.",
     priceTiers: [{ qtyLabel: "Pris", price: "enligt offert" }],
     packaging: "Levereras 25 st/platta",
-    images: ["/images/products/image.jpg"],
+    images: ["/images/products/ingefarsshot-01.jpg"],
   },
   {
     title: "Tablettaskar",
@@ -258,9 +258,9 @@ export const products: Product[] = [
     packaging: "Kartong om 50 st (15 kr extra om annan förpackning önskas)",
     leadTime: "ca 3 veckor från godkänt korrektur",
     images: [
-      "/images/products/Müslibar-flowpack.png",
-      "/images/products/Müslibar-flowpack-02.png",
-      "/images/products/Müslibar-flowpack-03.png",
+      "/images/products/Muslibar-flowpack.png",
+      "/images/products/Muslibar-flowpack-02.png",
+      "/images/products/Muslibar-flowpack-03.png",
     ],
   },
   {

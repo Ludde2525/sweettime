@@ -1,12 +1,12 @@
+import { FiPhone, FiMail } from "react-icons/fi";
+
 export default function Team() {
   return (
     <section className="py-16 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl text-white mb-4">Vårt Team</h2>
-          <p className="text-lg text-gray-400">
-            Lär känna teamet bakom Sweet Time UF
-          </p>
+          <h2 className="font-display text-4xl font-semibold text-white mb-4">Vårt Team</h2>
+      
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -22,8 +22,24 @@ export default function Team() {
               sina mål och fattar beslut samt håller ihop arbetet inom gruppen.
             </p>
             <div className="text-sm opacity-90">
-              <p className="mb-1">📞 076 794 29 82</p>
-              <p>✉️ lg.sweets10@gmail.com</p>
+              <p className="mb-1">
+                <a href="tel:+46767942982" className="inline-flex items-center gap-2 hover:underline">
+                  <FiPhone aria-hidden />
+                  076 794 29 82
+                </a>
+              </p>
+              <p>
+                <a href="mailto:lg.sweets10@gmail.com" className="inline-flex items-center gap-2 hover:underline">
+                  <FiMail aria-hidden />
+                  lg.sweets10@gmail.com
+                </a>
+              </p>
+              <p>
+                <a href="mailto:ludvig50@icloud.com" className="inline-flex items-center gap-2 hover:underline">
+                  <FiMail aria-hidden />
+                  ludvig50@icloud.com
+                </a>
+              </p>
             </div>
           </div>
 
@@ -39,8 +55,24 @@ export default function Team() {
               både inkomster och utgifter.
             </p>
             <div className="text-sm opacity-90">
-              <p className="mb-1">📞 070 459 93 67</p>
-              <p>✉️ lg.sweets10@gmail.com</p>
+              <p className="mb-1">
+                <a href="tel:+46704599367" className="inline-flex items-center gap-2 hover:underline">
+                  <FiPhone aria-hidden />
+                  070 459 93 67
+                </a>
+              </p>
+              <p>
+                <a href="mailto:lg.sweets10@gmail.com" className="inline-flex items-center gap-2 hover:underline">
+                  <FiMail aria-hidden />
+                  lg.sweets10@gmail.com
+                </a>
+              </p>
+              <p>
+                <a href="mailto:gabbek08@icloud.com" className="inline-flex items-center gap-2 hover:underline">
+                  <FiMail aria-hidden />
+                  gabbek08@icloud.com
+                </a>
+              </p>
             </div>
           </div>
         </div>

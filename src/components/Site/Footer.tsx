@@ -16,7 +16,7 @@ export default function Footer() {
               height={64}
               className="h-16 w-auto mb-4"
             />
-            <h3 className="text-2xl mb-3 text-white">Sweet Time UF</h3>
+            <h3 className="text-2xl mb-3 text-white font-semibold">Sweet Time UF</h3>
             <p className="text-gray-300 max-w-prose">
               Premium godis och choklad för privatpersoner, företag och
               föreningar. Vi skapar magiska stunder genom kvalitetsprodukter och
@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xl mb-4 text-white">Kontakt</h4>
+            <h4 className="text-xl mb-4 font-semibold text-white">Kontakt</h4>
             <div className="space-y-3 text-sm text-gray-300">
               <div>
                 <p className="font-medium text-white">Ludvig Hedlund</p>
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xl mb-4 text-white">Snabblänkar</h4>
+            <h4 className="text-xl mb-4 font-semi text-white">Länkar</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
                 <Link className="hover:text-yellow-400" href="/#hem">
@@ -128,7 +128,9 @@ export default function Footer() {
           <div className="mt-2 md:mt-0">
             Kod och Design:{" "}
             <span className="text-yellow-400 font-medium">
-              Josefine Eriksson
+              <a href="https://www.kodochdesign.se" target="_blank" rel="noopener noreferrer">
+                Josefine Eriksson
+              </a>
             </span>
           </div>
         </div>

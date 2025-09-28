@@ -3,7 +3,7 @@ export default function About() {
     <section id="om-oss" className="py-16 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl text-white mb-6">
+          <h2 className="font-display text-4xl font-semibold text-white mb-6">
             Om Sweet Time UF
           </h2>
         </div>
@@ -11,8 +11,8 @@ export default function About() {
         <div className="bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="font-display text-2xl text-white mb-6">
-                Vår Mission
+              <h3 className="font-display text-2xl font-semibold text-white mb-6">
+                Om oss
               </h3>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 Sweet Time UF erbjuder ett brett sortiment av kvalitetsgodis
