@@ -83,7 +83,7 @@ export default function ProductCard({ product }: { product: Product }) {
               {/* Body (scrollable only inside) */}
               <div className="flex-1 overflow-y-auto px-8 pb-8 pt-4">
                 <div className="grid gap-10 xl:gap-12 md:grid-cols-2">
-                  <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-gray-700">
+                  <div className="relative w-full aspect-[4/3] rounded-lg font-bold overflow-hidden bg-gray-700">
                     <Image
                       src={img}
                       alt={product.title}

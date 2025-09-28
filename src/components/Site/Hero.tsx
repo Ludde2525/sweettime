@@ -41,13 +41,13 @@ export default function Hero() {
   const next = () => setCurrent((i) => (i + 1) % max);
 
   return (
-    <section className="py-16 bg-white" id="hem">
+    <section className="py-16 bg-gray-900" id="hem">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-display font-semibold text-4xl text-gray-900 mb-4">
+          <h2 className="font-display font-semibold text-4xl text-white mb-4">
             Våra Specialiteter
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-200 max-w-2xl mx-auto">
             Upptäck vårt handplockade sortiment av premium godis och choklad
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function Hero() {
                 <div className="mt-6">
                   <Link
                     href="/produkter"
-                    className="inline-flex items-center px-6 py-3 rounded-full bg-white text-gray-900 font-semibold hover:bg-gray-100 transition"
+                    className="inline-flex items-center px-6 py-3 rounded-full bg-gray-900 text-white font-semibold hover:bg-gray-100 transition"
                   >
                     Se Produkter!
                   </Link>
