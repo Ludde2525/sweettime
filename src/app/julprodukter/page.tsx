@@ -1,28 +1,27 @@
 import ProductCard from "../../components/products/ProductCard";
-import { products } from "../../Data/products";
+import { products } from "../../Data/julproducts";
+import type { Product } from "../../Data/products";
 
 export const metadata = {
-  title: "Produkter — Sweet Time UF",
+  title: "Julprodukter — Sweet Time UF",
 };
 
-export default function ProductsPage() {
+export default function ChristmasProductsPage() {
   return (
-    <section className="py-16 bg-gray-900 min-h-screen">
+    <section className="py-16 bg-red-800 min-h-screen relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Enhanced Header Section */}
         <div className="mb-12 text-center space-y-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-            Våra Produkter
+            Julprodukter
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Upptäck vårt sortiment av högkvalitativa produkter, noggrant utvalt
-            för att möta dina behov
+            Upptäck vårt utvalda julsortiment — perfekta gåvor och
+            säsongsprodukter för företag och privatpersoner.
           </p>
         </div>
 
-        {/* Enhanced Grid with Staggered Animation Effect */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {products.map((p, index) => (
+          {products.map((p: Product, index) => (
             <div
               key={p.sku}
               className="transform transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1"
@@ -35,19 +34,18 @@ export default function ProductsPage() {
           ))}
         </div>
 
-        {/* Call to Action Section */}
         <div className="mt-16 text-center">
-          <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8 shadow-lg">
+          <div className="bg-red-900/80 border border-red-700 rounded-2xl p-8 shadow-lg">
             <h2 className="text-2xl font-semibold mb-4 text-white">
               Hittar du inte vad du letar efter?
             </h2>
-            <p className="text-gray-300 mb-6 max-w-md mx-auto">
-              Kontakta oss så hjälper vi dig att hitta den perfekta lösningen
-              för dina behov
+            <p className="text-red-100 mb-6 max-w-md mx-auto">
+              Kontakta oss så hjälper vi dig att hitta den perfekta julklappen
+              eller säsongslösningen.
             </p>
             <a
-              href="mailto:lg.sweets10@gmail.com?subject=Allmän förfrågan"
-              className="inline-flex items-center px-6 py-3 bg-gray-600 text-gray-200 rounded-lg font-medium hover:bg-gray-500 transition-colors duration-200 shadow-sm hover:shadow-md"
+              href="mailto:lg.sweets10@gmail.com?subject=Julprodukter förfrågan"
+              className="inline-flex items-center px-6 py-3 bg-gray-300 text-black rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200 shadow-sm hover:shadow-md"
             >
               Kontakta oss
               <svg

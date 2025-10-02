@@ -27,25 +27,31 @@ export default function Navbar() {
             <div className="ml-10 flex items-baseline space-x-8">
               <Link
                 href="/#hem"
-                className="text-white hover:text-yellow-400 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-white hover:text-gray-200 px-3 py-2 text-sm font-medium transition-colors"
               >
                 Hem
               </Link>
               <Link
                 href="/produkter"
-                className="text-gray-400 hover:text-yellow-400 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-400 hover:text-gray-200 px-3 py-2 text-sm font-medium transition-colors"
               >
                 Produkter
               </Link>
               <Link
+                href="/julprodukter"
+                className="text-gray-400 hover:text-gray-200 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                Julprodukter
+              </Link>
+              <Link
                 href="/#om-oss"
-                className="text-gray-400 hover:text-yellow-400 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-400 hover:text-gray-200 px-3 py-2 text-sm font-medium transition-colors"
               >
                 Om Oss
               </Link>
               <Link
                 href="/#kontakt"
-                className="text-gray-400 hover:text-yellow-400 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-400 hover:text-gray-200 px-3 py-2 text-sm font-medium transition-colors"
               >
                 Kontakt
               </Link>
@@ -61,7 +67,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setOpen(!open)}
-              className="text-white hover:text-yellow-400 p-2"
+              className="text-white hover:text-gray-200 p-2"
             >
               <FiMenu className="h-6 w-6" />
             </button>
@@ -74,28 +80,35 @@ export default function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link
               href="/#hem"
-              className="block px-3 py-2 text-white hover:text-yellow-400 font-medium"
+              className="block px-3 py-2 text-white hover:text-gray-200 font-medium"
               onClick={() => setOpen(false)}
             >
               Hem
             </Link>
             <Link
               href="/produkter"
-              className="block px-3 py-2 text-gray-400 hover:text-yellow-400"
+              className="block px-3 py-2 text-gray-400 hover:text-gray-200"
               onClick={() => setOpen(false)}
             >
               Produkter
             </Link>
             <Link
+              href="/julprodukter"
+              className="block px-3 py-2 text-gray-400 hover:text-gray-200"
+              onClick={() => setOpen(false)}
+            >
+              Julprodukter
+            </Link>
+            <Link
               href="/#om-oss"
-              className="block px-3 py-2 text-gray-400 hover:text-yellow-400"
+              className="block px-3 py-2 text-gray-400 hover:text-gray-200"
               onClick={() => setOpen(false)}
             >
               Om Oss
             </Link>
             <Link
               href="/#kontakt"
-              className="block px-3 py-2 text-gray-400 hover:text-yellow-400"
+              className="block px-3 py-2 text-gray-400 hover:text-gray-200"
               onClick={() => setOpen(false)}
             >
               Kontakt

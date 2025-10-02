@@ -1,18 +1,27 @@
 import { FiPhone, FiMail } from "react-icons/fi";
+import Image from "next/image";
 
 export default function Team() {
   return (
     <section className="py-16 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl font-semibold text-white mb-4">Vårt Team</h2>
-      
+          <h2 className="font-display text-4xl font-semibold text-white mb-4">
+            Vårt Team
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="bg-gray-900 rounded-2xl p-8 text-white text-center shadow-xl">
-            <div className="w-32 h-32 bg-gray-700 rounded-full mx-auto mb-6 flex items-center justify-center">
-              <span className="text-4xl font-display">LH</span>
+            <div className="w-32 h-32 bg-gray-700 rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden">
+              <Image
+                src="/images/Profil/ludvig.jpg"
+                alt="Ludvig Hedlund"
+                width={128}
+                height={128}
+                className="object-cover w-32 h-32"
+                priority
+              />
             </div>
             <h3 className="font-display text-2xl mb-2">Ludvig Hedlund</h3>
             <p className="text-xl mb-4 opacity-90">Verkställande Direktör</p>
@@ -23,19 +32,28 @@ export default function Team() {
             </p>
             <div className="text-sm opacity-90">
               <p className="mb-1">
-                <a href="tel:+46767942982" className="inline-flex items-center gap-2 hover:underline">
+                <a
+                  href="tel:+46767942982"
+                  className="inline-flex items-center gap-2 hover:underline"
+                >
                   <FiPhone aria-hidden />
                   076 794 29 82
                 </a>
               </p>
               <p>
-                <a href="mailto:lg.sweets10@gmail.com" className="inline-flex items-center gap-2 hover:underline">
+                <a
+                  href="mailto:lg.sweets10@gmail.com"
+                  className="inline-flex items-center gap-2 hover:underline"
+                >
                   <FiMail aria-hidden />
                   lg.sweets10@gmail.com
                 </a>
               </p>
               <p>
-                <a href="mailto:ludvig50@icloud.com" className="inline-flex items-center gap-2 hover:underline">
+                <a
+                  href="mailto:ludvig50@icloud.com"
+                  className="inline-flex items-center gap-2 hover:underline"
+                >
                   <FiMail aria-hidden />
                   ludvig50@icloud.com
                 </a>
@@ -44,8 +62,15 @@ export default function Team() {
           </div>
 
           <div className="bg-gray-900 rounded-2xl p-8 text-white text-center shadow-xl">
-            <div className="w-32 h-32 bg-gray-700 rounded-full mx-auto mb-6 flex items-center justify-center">
-              <span className="text-4xl font-display">GK</span>
+            <div className="w-32 h-32 bg-gray-700 rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden">
+              <Image
+                src="/images/Profil/gabriel.jpg"
+                alt="Gabriel Kass Alias"
+                width={128}
+                height={128}
+                className="object-cover w-32 h-32"
+                priority
+              />
             </div>
             <h3 className="font-display text-2xl mb-2">Gabriel Kass Alias</h3>
             <p className="text-xl mb-4 opacity-90">Vice VD - Ekonomiansvarig</p>
@@ -56,19 +81,28 @@ export default function Team() {
             </p>
             <div className="text-sm opacity-90">
               <p className="mb-1">
-                <a href="tel:+46704599367" className="inline-flex items-center gap-2 hover:underline">
+                <a
+                  href="tel:+46704599367"
+                  className="inline-flex items-center gap-2 hover:underline"
+                >
                   <FiPhone aria-hidden />
                   070 459 93 67
                 </a>
               </p>
               <p>
-                <a href="mailto:lg.sweets10@gmail.com" className="inline-flex items-center gap-2 hover:underline">
+                <a
+                  href="mailto:lg.sweets10@gmail.com"
+                  className="inline-flex items-center gap-2 hover:underline"
+                >
                   <FiMail aria-hidden />
                   lg.sweets10@gmail.com
                 </a>
               </p>
               <p>
-                <a href="mailto:gabbek08@icloud.com" className="inline-flex items-center gap-2 hover:underline">
+                <a
+                  href="mailto:gabbek08@icloud.com"
+                  className="inline-flex items-center gap-2 hover:underline"
+                >
                   <FiMail aria-hidden />
                   gabbek08@icloud.com
                 </a>

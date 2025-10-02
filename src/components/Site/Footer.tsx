@@ -16,7 +16,9 @@ export default function Footer() {
               height={64}
               className="h-16 w-auto mb-4"
             />
-            <h3 className="text-2xl mb-3 text-white font-semibold">Sweet Time UF</h3>
+            <h3 className="text-2xl mb-3 text-white font-semibold">
+              Sweet Time UF
+            </h3>
             <p className="text-gray-300 max-w-prose">
               Premium godis och choklad för privatpersoner, företag och
               föreningar. Vi skapar magiska stunder genom kvalitetsprodukter och
@@ -48,7 +50,7 @@ export default function Footer() {
               <div className="pt-2 flex items-center gap-2">
                 <FiMail />{" "}
                 <a
-                  className="hover:text-yellow-400"
+                  className="hover:text-gray-300"
                   href="mailto:lg.sweets10@gmail.com"
                 >
                   lg.sweets10@gmail.com
@@ -61,28 +63,28 @@ export default function Footer() {
             <h4 className="text-xl mb-4 font-semi text-white">Länkar</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link className="hover:text-yellow-400" href="/#hem">
+                <Link className="hover:text-gray-300" href="/#hem">
                   Hem
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-yellow-400" href="/produkter">
+                <Link className="hover:text-gray-300" href="/produkter">
                   Produkter
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-yellow-400" href="/#om-oss">
+                <Link className="hover:text-gray-300" href="/#om-oss">
                   Om oss
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-yellow-400" href="/#kontakt">
+                <Link className="hover:text-gray-300" href="/#kontakt">
                   Kontakt
                 </Link>
               </li>
               <li>
                 <a
-                  className="hover:text-yellow-400"
+                  className="hover:text-gray-300"
                   href="https://www.instagram.com/sweet_timeuf"
                   target="_blank"
                   rel="noreferrer"
@@ -94,7 +96,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  className="hover:text-yellow-400"
+                  className="hover:text-gray-300"
                   href="https://www.facebook.com/profile.php?id=61580723927690"
                   target="_blank"
                   rel="noreferrer"
@@ -106,7 +108,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  className="hover:text-yellow-400"
+                  className="hover:text-gray-300"
                   href="https://ungforetagsamhet.se/company/sweet-time-uf"
                   target="_blank"
                   rel="noreferrer"
@@ -127,8 +129,12 @@ export default function Footer() {
           </div>
           <div className="mt-2 md:mt-0">
             Kod och Design:{" "}
-            <span className="text-yellow-400 font-medium">
-              <a href="https://www.kodochdesign.se" target="_blank" rel="noopener noreferrer">
+            <span className="text-gray-300 font-medium">
+              <a
+                href="https://www.kodochdesign.se"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Josefine Eriksson
               </a>
             </span>
@@ -139,7 +145,7 @@ export default function Footer() {
           <a
             href="mailto:lg.sweets10@gmail.com"
             aria-label="Maila offertförfrågan"
-            className="inline-flex items-center px-6 py-3 bg-yellow-400 text-black rounded-lg font-medium hover:bg-yellow-300 transition-colors duration-200"
+            className="inline-flex items-center px-6 py-3 bg-gray-300 text-black rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200"
           >
             Maila offertförfrågan
           </a>

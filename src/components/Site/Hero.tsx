@@ -22,7 +22,7 @@ const slides: Slide[] = [
     image: "/images/bildspel/Chokladbitar-express-01.png",
   },
 
-    {
+  {
     title: "Twistad Choklad",
     text: "Chokladöverdragna smörkolor, klassiskt reklamgodis.",
     image: "/images/bildspel/Twistad-choklad-01.jpg",
@@ -53,7 +53,7 @@ export default function Hero() {
         </div>
 
         <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-          <div className="relative w-full aspect-[4/3] md:aspect-[3/2]">
+          <div className="relative w-full aspect-[4/3]">
             {slides.map((s, i) => (
               <div
                 key={i}
@@ -73,18 +73,20 @@ export default function Hero() {
               </div>
             ))}
 
-            <div className="absolute inset-0 flex items-center justify-center text-center text-white p-8 z-10">
+            <div className="absolute font-semibold inset-0 flex items-center justify-center text-center text-white p-8 z-10">
               <div>
-                <h3 className="font-display text-3xl md:text-4xl mb-4">
-                  {slides[current].title}
-                </h3>
-                <p className="text-lg md:text-xl max-w-2xl mx-auto">
-                  {slides[current].text}
-                </p>
+                <div className="inline-block bg-gray-900/30 px-4 py-3 rounded-md">
+                  <h3 className="font-display text-2xl md:text-4xl mb-4">
+                    {slides[current].title}
+                  </h3>
+                  <p className="text-base md:text-xl max-w-2xl mx-auto">
+                    {slides[current].text}
+                  </p>
+                </div>
                 <div className="mt-6">
                   <Link
                     href="/produkter"
-                    className="inline-flex items-center px-6 py-3 rounded-full bg-gray-900 text-white font-semibold hover:bg-gray-100 transition"
+                    className="inline-flex items-center px-4 py-2 text-sm md:text-lg font-medium rounded-full bg-gray-900 text-white hover:bg-gray-100 transition"
                   >
                     Se Produkter!
                   </Link>

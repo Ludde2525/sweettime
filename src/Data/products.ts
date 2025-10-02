@@ -88,7 +88,10 @@ export const products: Product[] = [
     packaging: "Kartong om 144 st",
     leadTime: "ca 3 veckor från godkänt korrektur",
     express: "1 vecka, tillägg 1500 kr/order",
-    images: ["/images/products/Clic-Clac-01.jpg"],
+    images: [
+      "/images/products/Clic-Clac-02.jpg",
+      "/images/products/Clic-Clac-01.jpg",
+    ],
   },
   {
     title: "Mintbox",

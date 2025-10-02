@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import ImageCarousel from "./ImageCarousel";
 import type { Product } from "../../Data/products";
 import { useState, useEffect, useCallback, useRef } from "react";
 import { createPortal } from "react-dom";
@@ -84,12 +85,10 @@ export default function ProductCard({ product }: { product: Product }) {
               <div className="flex-1 overflow-y-auto px-8 pb-8 pt-4">
                 <div className="grid gap-10 xl:gap-12 md:grid-cols-2">
                   <div className="relative w-full aspect-[4/3] rounded-lg font-bold overflow-hidden bg-gray-700">
-                    <Image
-                      src={img}
+                    <ImageCarousel
+                      images={product.images ?? [img]}
                       alt={product.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="h-full"
                     />
                   </div>
                   <div className="space-y-6 text-base text-gray-300 leading-relaxed">
