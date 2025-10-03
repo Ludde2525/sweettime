@@ -97,7 +97,7 @@ export default function Navbar() {
               className="block px-3 py-2 text-gray-400 hover:text-gray-200"
               onClick={() => setOpen(false)}
             >
-              Julprodukter
+              Jul Produkter
             </Link>
             <Link
               href="/#om-oss"
