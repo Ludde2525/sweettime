@@ -170,7 +170,10 @@ export const products: Product[] = [
       "50, 100 eller 250 askar (15 kr extra om annan förpackning önskas)",
     leadTime: "ca 2 veckor från godkänt korrektur",
     express: "1 vecka, tillägg 1500 kr/order",
-    images: ["/images/products/Tablettaskar-01.jpg"],
+    images: [
+      "/images/products/Tablettaskar-01.jpg",
+      "/images/products/Tablettaskar-02.jpg",
+    ],
   },
   {
     title: "Twistad choklad – smörkola",
