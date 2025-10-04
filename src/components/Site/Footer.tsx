@@ -97,7 +97,7 @@ export default function Footer() {
               <li>
                 <a
                   className="hover:text-gray-300"
-                  href="https://www.facebook.com/profile.php?id=61580723927690"
+                  href="https://www.facebook.com/profile.php?id=61581595476624"
                   target="_blank"
                   rel="noreferrer"
                 >
