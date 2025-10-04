@@ -117,6 +117,6 @@ För frågor eller support:
 
 - E-post: lg.sweets10@gmail.com
 
----
+## Kod och Design
 
-Vill du att jag också skapar en `LICENSE`-fil (t.ex. MIT) och en enkel `CONTRIBUTING.md`? Jag kan lägga till dem direkt i repot om du vill.
+Kod och design av Josefine Eriksson https://kodochdesign.se
