@@ -57,7 +57,7 @@ export default function Navbar() {
               </Link>
               <a
                 href="mailto:lg.sweets10@gmail.com"
-                className="bg-gray-700 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition-all transform hover:scale-105"
+                className=" bg-gray-700 text-white hover:bg-gray-600  px-6 py-2 rounded-full font-medium hover:shadow-lg transition-all transform "
               >
                 Begär Offert
               </a>

@@ -12,6 +12,12 @@ type Slide = {
 
 const slides: Slide[] = [
   {
+    title: "Se vårt Julsortiment",
+    text: "Perfekta gåvor och säsongsprodukter för företag och privatpersoner",
+    image: "/images/bildspel/julkorg-strutar-sack.jpg",
+  },
+
+  {
     title: "Müslibar flowpack",
     text: "Müslibar i smakerna choklad och kokos. Perfekt som mellanmål eller snacks",
     image: "/images/bildspel/Muslibar-flowpack.png",
@@ -21,7 +27,6 @@ const slides: Slide[] = [
     text: "Små chokladbitar med tryck runt omslaget. Perfekt för event och giveaways",
     image: "/images/bildspel/Chokladbitar-express-01.png",
   },
-
   {
     title: "Twistad Choklad",
     text: "Chokladöverdragna smörkolor, klassiskt reklamgodis.",
@@ -32,6 +37,7 @@ const slides: Slide[] = [
 export default function Hero() {
   const [current, setCurrent] = useState(0);
   const max = useMemo(() => slides.length, []);
+
   useEffect(() => {
     const id = setInterval(() => setCurrent((i) => (i + 1) % max), 5000);
     return () => clearInterval(id);
@@ -41,23 +47,30 @@ export default function Hero() {
   const next = () => setCurrent((i) => (i + 1) % max);
 
   return (
-    <section className="py-16 bg-gray-900" id="hem">
+    <section className="py-20 bg-gray-900" id="hem">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="font-display font-semibold text-4xl text-white mb-4">
+        <div className="text-center mb-16">
+          <h2 className="font-display font-bold text-5xl text-white mb-6">
             Våra Specialiteter
           </h2>
-          <p className="text-lg text-gray-200 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Upptäck vårt handplockade sortiment av premium godis och choklad
           </p>
         </div>
 
-        <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-          <div className="relative w-full aspect-[4/3]">
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gray-800">
+          {/* Rubrik för mobil ovanför bilden */}
+          <div className="md:hidden text-center text-white px-8 py-8">
+            <h3 className="font-display text-2xl font-bold mb-4">
+              {slides[current].title}
+            </h3>
+          </div>
+
+          <div className="relative w-full aspect-[16/9]">
             {slides.map((s, i) => (
               <div
                 key={i}
-                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                className={`absolute inset-0 transition-opacity duration-700 ${
                   i === current ? "opacity-100" : "opacity-0"
                 }`}
               >
@@ -69,35 +82,32 @@ export default function Hero() {
                   sizes="(max-width: 1280px) 100vw, 1280px"
                   priority={i === current}
                 />
-                <div className="absolute inset-0 bg-black/40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
               </div>
             ))}
 
-            <div className="absolute font-semibold inset-0 flex items-center justify-center text-center text-white p-8 z-10">
-              <div>
-                <div className="inline-block bg-gray-900/30 px-4 py-3 rounded-md">
-                  <h3 className="font-display text-2xl md:text-4xl mb-4">
-                    {slides[current].title}
-                  </h3>
-                  <p className="text-base md:text-xl max-w-2xl mx-auto">
-                    {slides[current].text}
-                  </p>
-                </div>
-                <div className="mt-6">
-                  <Link
-                    href="/produkter"
-                    className="inline-flex items-center px-4 py-2 text-sm md:text-lg font-medium rounded-full bg-gray-900 text-white hover:bg-gray-100 transition"
-                  >
-                    Se Produkter!
-                  </Link>
-                </div>
+            {/* Text för desktop absolut över bilden */}
+            <div className="hidden md:flex absolute inset-0 items-end justify-center pb-20 px-8 z-10">
+              <div className="text-center text-white max-w-3xl">
+                <h3 className="font-display text-3xl md:text-5xl font-bold mb-4">
+                  {slides[current].title}
+                </h3>
+                <p className="text-lg md:text-xl mb-8 text-gray-200">
+                  {slides[current].text}
+                </p>
+                <Link
+                  href="/produkter"
+                  className="inline-flex items-center px-8 py-4 text-lg font-semibold rounded-full bg-white text-gray-900 hover:bg-gray-200 transition-colors"
+                >
+                  Se Produkter
+                </Link>
               </div>
             </div>
 
             <button
               aria-label="Föregående"
               onClick={prev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-all z-20"
+              className="absolute left-6 top-1/2 -translate-y-1/2 bg-gray-900/70 hover:bg-gray-900 text-white p-4 rounded-full transition-all z-20"
             >
               <svg
                 className="w-6 h-6"
@@ -113,10 +123,11 @@ export default function Hero() {
                 />
               </svg>
             </button>
+
             <button
               aria-label="Nästa"
               onClick={next}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-all z-20"
+              className="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-900/70 hover:bg-gray-900 text-white p-4 rounded-full transition-all z-20"
             >
               <svg
                 className="w-6 h-6"
@@ -133,18 +144,31 @@ export default function Hero() {
               </svg>
             </button>
 
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
               {slides.map((_, i) => (
                 <button
                   key={i}
                   aria-label={`Gå till slide ${i + 1}`}
                   onClick={() => setCurrent(i)}
-                  className={`w-3 h-3 rounded-full transition-opacity ${
-                    i === current ? "bg-white" : "bg-white/50"
+                  className={`h-2 rounded-full transition-all ${
+                    i === current ? "bg-white w-8" : "bg-white/50 w-2"
                   }`}
                 />
               ))}
             </div>
+          </div>
+
+          {/* Beskrivning och knapp för mobil under bilden */}
+          <div className="md:hidden text-center text-white px-8 py-8">
+            <p className="text-base mb-6 text-gray-200">
+              {slides[current].text}
+            </p>
+            <Link
+              href="/produkter"
+              className="inline-flex items-center px-6 py-3 text-base font-semibold rounded-full bg-white text-gray-900 hover:bg-gray-200 transition-colors"
+            >
+              Se Produkter
+            </Link>
           </div>
         </div>
       </div>

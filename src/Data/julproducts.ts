@@ -66,7 +66,7 @@ export const products: Product[] = [
       "Korg med blandat inslaget varumärkesgodis och pralinkulor! Lägg till kort 20:- för tydlig avsändare på korgen. Ingen kliché vid standard design – vid egen design tillkommer kliché 600:-.",
     images: [
       "/images/jul/stor-julkorg-01.jpg",
-      "/images/jul/mega-julkorg-01.jpg",
+      "/images/jul/kort-till-korg-01.jpg",
     ],
   },
 

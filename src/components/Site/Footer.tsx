@@ -145,7 +145,7 @@ export default function Footer() {
           <a
             href="mailto:lg.sweets10@gmail.com"
             aria-label="Maila offertförfrågan"
-            className="inline-flex items-center px-6 py-3 bg-gray-300 text-black rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200"
+            className="inline-flex items-center px-6 py-3  bg-gray-700 text-white rounded-lg  hover:bg-gray-600 font-medium transition-colors duration-200"
           >
             Maila offertförfrågan
           </a>
