@@ -134,17 +134,7 @@ export const products: Product[] = [
       "/images/products/pringles-02.jpg",
     ],
   },
-  {
-    title: "Energidryck",
-    sku: "3073",
-    shortDescription:
-      "Svalkande energidryck med din design på etiketten runt burken. Pris enligt offert.",
-    longDescription:
-      "Svalkande energidryck med din design på etiketten runt burken.",
-    priceTiers: [{ qtyLabel: "Pris", price: "enligt offert" }],
-    packaging: "Levereras 24 st/platta",
-    images: ["/images/products/Energidryck01.jpg"],
-  },
+
   {
     title: "Ingefärsshot 60 ml",
     sku: "827",
