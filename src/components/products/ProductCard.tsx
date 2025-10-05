@@ -163,7 +163,7 @@ export default function ProductCard({ product }: { product: Product }) {
                         href={`mailto:lg.sweets10@gmail.com?subject=Offertförfrågan: ${encodeURIComponent(
                           product.title
                         )} (${product.sku})`}
-                        className="inline-block bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors text-lg"
+                        className="inline-block bg-gray-700 text-gray-50 px-8 py-3 shadow rounded-full font-semibold hover:bg-gray-500 transition-colors text-lg"
                       >
                         Maila offertförfrågan
                       </a>
