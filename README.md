@@ -113,8 +113,6 @@ Lägg till en `LICENSE`-fil om du vill publicera projektet under t.ex. MIT-licen
 
 ## Kontakt
 
-För frågor eller support:
-
 - E-post: lg.sweets10@gmail.com
 
 ## Kod och Design
