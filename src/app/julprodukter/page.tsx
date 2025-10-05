@@ -142,19 +142,17 @@ export default function ChristmasProductsPage() {
             <div className="relative z-10">
               <div className="text-5xl mb-4">🎁</div>
               <h2 className="text-2xl font-bold mb-4 text-white drop-shadow-md">
-                Begär offert
+                Hittar du inte vad du letar efter?
               </h2>
               <p className="text-white/90 mb-6 max-w-md mx-auto text-lg">
-                Begär en offert direkt — ange produktnamn eller dina önskemål i
-                mailet så återkommer vi så snart som möjligt.
+                Kontakta oss så hjälper vi dig att hitta den perfekta julklappen
+                eller säsongslösningen! 🎅
               </p>
               <a
-                href={`mailto:lg.sweets10@gmail.com?subject=${encodeURIComponent(
-                  "Offertförfrågan: Julprodukter"
-                )}`}
+                href="mailto:lg.sweets10@gmail.com?subject=Julprodukter förfrågan"
                 className="inline-flex items-center px-8 py-4 bg-white text-red-800 rounded-xl font-bold hover:bg-red-50 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 transform"
               >
-                ✉️ Begär offert
+                ✉️ Kontakta oss
                 <svg
                   className="ml-2 w-5 h-5"
                   fill="none"
