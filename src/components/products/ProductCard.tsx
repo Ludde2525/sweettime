@@ -84,7 +84,8 @@ export default function ProductCard({ product }: { product: Product }) {
               {/* Body (scrollable only inside) */}
               <div className="flex-1 overflow-y-auto px-8 pb-8 pt-4">
                 <div className="grid gap-10 xl:gap-12 md:grid-cols-2">
-                  <div className="relative w-full aspect-[4/3] rounded-lg font-bold overflow-hidden bg-gray-700">
+                  {/* Allow carousel to control its own height (helps mobile modal view) */}
+                  <div className="relative w-full rounded-lg font-bold overflow-hidden bg-gray-700">
                     <ImageCarousel
                       images={product.images ?? [img]}
                       alt={product.title}

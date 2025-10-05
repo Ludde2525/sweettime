@@ -151,8 +151,19 @@ export const products: Product[] = [
     sku: "7010-1",
     shortDescription:
       "Storsäljare för både barn och vuxna. Fyll med tuggisar eller tabletter. Stor tryckyta. FSC-märkt, klimatkompenserad.",
-    longDescription:
-      "En storsäljare för både barn och vuxna. Fyll med mjuka tuggisar eller hårda tabletter. Generös tryckyta på fram, bak, sidor och lock. Trycks på FSC-märkt och klimatkompenserat papper.",
+  longDescription: `En storsäljare för både barn och vuxna. Fyll med mjuka tuggisar eller hårda tabletter. Generös tryckyta på fram, bak, sidor och lock. Trycks på FSC-märkt och klimatkompenserat papper.
+
+Finns i flera smaker:
+- Frukttoppar
+- Skittles Frukt
+- Frukttugg
+- Jelly Beans (frukt)
+- Mixade frukter (med innerpapper)
+- Saltpastill Pingvin (med innerpapper)
+- Mixade skogsbär (med innerpapper)
+- Jelly Beans Cola
+- Saltlakritspastiller (+ 3 kr/ask) (med innerpapper)
+- Minttabletter`,
     priceTiers: [
       { qtyLabel: "100 st", price: "11,95 kr" },
       { qtyLabel: "500 st", price: "7,95 kr" },
