@@ -1,6 +1,5 @@
 # Sweet Time UF
 
-![Logga](./public/images/sweettime-vit-loggo.png)
 ![Mockup Sweet Time UF](./public/images/mockup-sweettime-uf.jpg)
 
 Sweet Time UF är en Next.js-applikation byggd för att visa och sälja premiumgodis i bulk. Projektet använder Next.js App Router, Tailwind CSS och TypeScript, och är strukturerat för enkel vidareutveckling och distribution.
