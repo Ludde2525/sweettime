@@ -53,7 +53,8 @@ export default function ImageCarousel({
       onClick={(e) => e.stopPropagation()}
     >
       {/* Main image */}
-      <div className="relative w-full overflow-hidden rounded-xl bg-black/20 h-[360px] md:h-[420px]">
+      {/* Use viewport-based height on small screens so images are more visible in modals on mobile */}
+      <div className="relative w-full overflow-hidden rounded-xl bg-black/20 h-[50vh] md:h-[420px]">
         <Image
           src={srcs[current]}
           alt={alt}

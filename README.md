@@ -116,8 +116,6 @@ Detta projekt är licensierat under Creative Commons Attribution-NonCommercial 4
 
 ## Kontakt
 
-För frågor eller support:
-
 - E-post: lg.sweets10@gmail.com
 
 ## Kod och Design
